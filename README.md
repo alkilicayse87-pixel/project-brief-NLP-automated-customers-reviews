@@ -123,9 +123,9 @@ Summarize the performance of your model on the held-out test dataset using both 
 
 <br><br>
 
-### 3. Build a Model for Product Review Summarization Using Generative AI
+### 3. Generate a summary for each product category using Generative AI
 
-- **Goal**: Summarize reviews into articles that recommend the top products for each category.
+- **Goal**: Generate a summary with the reviews for each category.
 - **Task**: Create a model that generates a short article (like a blog post) for each of the product categories you created in the previous step. 
 
 
@@ -148,7 +148,7 @@ This is just an example. You can get more ideas from other consumer Reviews webs
 
 <br><br>
 
-### 4. Build a Product + Deploy It
+### 4. Build & Deploy a final product
 
 Now it's time to turn your models into something people can actually use. Bring together the sentiment classifier, clustering model, and summarization model you've built into a single, functional product.
 
@@ -178,7 +178,7 @@ We provide you with some ideas below. However, you are not limited to these opti
 2. **Model Development**:
    - Create and evaluate the review classification model.
    - Create and test the clustering model.
-   - Create and test the summarization model using Generative AI.
+   - Create and test the summarization model.
 3. **Deployment**: Deploy the models using your chosen framework.
 4. **Documentation**: Prepare the README, report, and presentation.
 5. **Final Delivery**: Submit all deliverables, including the deployed app and final output.
