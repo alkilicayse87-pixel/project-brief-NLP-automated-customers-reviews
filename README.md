@@ -141,9 +141,9 @@ This is just an example. You can get more ideas from other consumer Reviews webs
 
 **Some options**:
 
-- Consider using **Pretrained Generative Models** like **T5**, **GPT-3**, or **BART** for generating coherent and well-structured summaries. These models excel at tasks like summarization and text generation, and can be fine-tuned to produce high-quality outputs based on the extracted insights from reviews.
-- You are encouraged to explore other **Transformer-based models** available on platforms like **Hugging Face**. Fine-tuning any of these pre-trained models on your specific dataset could further improve the relevance and quality of the generated summaries.
-- You can also use an LLM API (e.g., OpenAI API) to generate the summaries -it will give good results. However, we encourage you to try a pretrained model first.
+- You can use **Pretrained Generative Models** like **T5**, or **BART** for generating coherent and well-structured summaries. These models excel at tasks like summarization and text generation, and can be fine-tuned to produce high-quality outputs based on the extracted insights from reviews.
+- You can also explore other **Transformer-based models** available on platforms like **Hugging Face**. Fine-tuning any of these pre-trained models on your specific dataset could further improve the relevance and quality of the generated summaries.
+- Another option is to use a proprietary LLM API (e.g., the OpenAI API) to generate the summaries, as it can produce high-quality results. However, we encourage you to first explore using a pretrained model that you can run and adapt yourself.
 
 
 <br><br>
