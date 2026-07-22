@@ -146,6 +146,12 @@ This is just an example. You can get more ideas from other consumer Reviews webs
 - Another option is to use a proprietary LLM API (e.g., the OpenAI API) to generate the summaries, as it can produce high-quality results. However, we encourage you to first explore using a pretrained model that you can run and adapt yourself.
 
 
+**Recommendations**:
+
+- If you use a pretrained model, start with the smallest versions of popular models (llama, mistral, ...). Choose a small model that you can fine tune and run fast inference on. Anywhere between 1B-8B parameters should be fine, do not go larger.
+- Work on the prompt for the summarizer by experimenting with multiple prompt variants and evaluating their performance. If prompt engineering alone does not achieve the desired quality, consider fine-tuning the model for this specific task to improve accuracy and consistency.
+
+
 <br><br>
 
 ### 4. Build & Deploy a final product
