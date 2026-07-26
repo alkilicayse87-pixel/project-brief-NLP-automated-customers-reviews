@@ -70,11 +70,15 @@ Since the dataset contains **star ratings (1 to 5)**, you should map them to thr
  This is a simple approach, but you are encouraged to experiment with different mappings! 
 
 
-**Model Building:**
+**Some options:**
 
-For classifying customer reviews into **positive, negative, or neutral**, use **pretrained transformer-based models** to leverage powerful language representations without training from scratch.  
+You can tackle this with either traditional NLP methods or pretrained transformer models:
+- Traditional NLP: Use traditional NLP techniques for feature extraction (e.g., BoW, TF-IDF...) + a classifier (e.g., logistic regression, SVM, naive Bayes) trained from scratch.
+- Pretrained Transformers: Use a pretrained transformer-based model to leverage powerful language representations, typically via fine-tuning rather than training from scratch.
 
 **Suggested Pretrained Models:**
+
+If you decide to use a pretrained model, here are some options:
 
 - **`distilbert-base-uncased`** – Lightweight and fast, ideal for limited resources.  
 - **`bert-base-uncased`** – A strong general-purpose model for sentiment analysis.  
