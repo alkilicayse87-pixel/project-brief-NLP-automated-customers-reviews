@@ -52,129 +52,173 @@ Notes:
 
 ### TASK 1: Build a model for Sentiment Analysis
 
-- **Goal**: Classify customer reviews into **positive**, **negative**, or **neutral** categories to help the company improve its products and services.
-- **Task**: Develop, train, and evaluate a supervised multi-class classification model to classify the **textual content** of customer reviews as positive, negative, or neutral.
+<details>
+  <summary>Click here for more details</summary>
+  
+  <br />
 
-<br>
+   - **Goal**: Classify customer reviews into **positive**, **negative**, or **neutral** categories to help the company improve its products and services.
+   - **Task**: Develop, train, and evaluate a supervised multi-class classification model to classify the **textual content** of customer reviews as positive, negative, or neutral.
 
-**Mapping Star Ratings to Sentiment Classes:**
+   <br>
 
-Since the dataset contains **star ratings (1 to 5)**, you should map them to three sentiment classes as follows:  
+   **Mapping Star Ratings to Sentiment Classes:**
 
-| **Star Rating** | **Sentiment Class** |
-|---------------|------------------|
-|  1 - 2     | **Negative**  |
-|  3         | **Neutral**  |
-|  4 - 5     | **Positive**  |
+   Since the dataset contains **star ratings (1 to 5)**, you should map them to three sentiment classes as follows:  
 
- This is a simple approach, but you are encouraged to experiment with different mappings! 
+   | **Star Rating** | **Sentiment Class** |
+   |---------------|------------------|
+   |  1 - 2     | **Negative**  |
+   |  3         | **Neutral**  |
+   |  4 - 5     | **Positive**  |
 
+   This is a simple approach, but you are encouraged to experiment with different mappings! 
 
-**Some options:**
+   <br />
 
-You can tackle this with either traditional NLP methods or pretrained transformer models:
-- Traditional NLP: Use traditional NLP techniques for feature extraction (e.g., BoW, TF-IDF...) + a classifier (e.g., logistic regression, SVM, naive Bayes) trained from scratch.
-- Pretrained Transformers: Use a pretrained transformer-based model to leverage powerful language representations, typically via fine-tuning rather than training from scratch.
+   **Some options:**
 
-**Suggested Pretrained Models:**
+   You can tackle this with either traditional NLP methods or pretrained transformer models:
+   - Traditional NLP: Use traditional NLP techniques for feature extraction (e.g., BoW, TF-IDF...) + a classifier (e.g., logistic regression, SVM, naive Bayes) trained from scratch.
+   - Pretrained Transformers: Use a pretrained transformer-based model to leverage powerful language representations, typically via fine-tuning rather than training from scratch.
 
-If you decide to use a pretrained model, here are some options:
+   <br />
 
-- **`distilbert-base-uncased`** – Lightweight and fast, ideal for limited resources.  
-- **`bert-base-uncased`** – A strong general-purpose model for sentiment analysis.  
-- **`roberta-base`** – More robust to nuanced sentiment variations.  
-- **`nlptown/bert-base-multilingual-uncased-sentiment`** – Handles multiple languages, useful for diverse datasets.  
-- **`cardiffnlp/twitter-roberta-base-sentiment`** – Optimized for short texts like social media reviews.  
+   **Suggested Pretrained Models:**
 
-Explore models on [Hugging Face](https://huggingface.co/models) and experiment with fine-tuning to improve accuracy.
+   If you decide to use a pretrained model, here are some options:
 
-**Model Evaluation:**
+   - **`distilbert-base-uncased`** – Lightweight and fast, ideal for limited resources.  
+   - **`bert-base-uncased`** – A strong general-purpose model for sentiment analysis.  
+   - **`roberta-base`** – More robust to nuanced sentiment variations.  
+   - **`nlptown/bert-base-multilingual-uncased-sentiment`** – Handles multiple languages, useful for diverse datasets.  
+   - **`cardiffnlp/twitter-roberta-base-sentiment`** – Optimized for short texts like social media reviews.  
 
-Evaluate the model's performance on a separate test dataset using various evaluation metrics:
-- Accuracy: Percentage of correctly classified instances.
-- Precision: Proportion of true positive predictions among all positive predictions.
-- Recall: Proportion of true positive predictions among all actual positive instances.
-- F1-score: Harmonic mean of precision and recall.
+   Explore models on [Hugging Face](https://huggingface.co/models) and experiment with fine-tuning to improve accuracy.
 
-Calculate the confusion matrix to analyze model's performance across different classes.
+   <br />
 
+   **Model Evaluation:**
 
-**Results:**
+   Evaluate the model's performance on a separate test dataset using various evaluation metrics:
+   - Accuracy: Percentage of correctly classified instances.
+   - Precision: Proportion of true positive predictions among all positive predictions.
+   - Recall: Proportion of true positive predictions among all actual positive instances.
+   - F1-score: Harmonic mean of precision and recall.
 
-Summarize the performance of your model on the held-out test dataset using both quantitative metrics and visual analysis.
+   Calculate the confusion matrix to analyze model's performance across different classes.
 
-- Report the overall accuracy: Show the percentage of correctly classified test samples (X%).
-- Analyze classification performance: Present precision, recall, and F1-score for each sentiment class to provide insights into the model’s performance:
-   - Class 1: Precision = X%, Recall = X%, F1-score = X%
-   - Class 2: Precision = X%, Recall = X%, F1-score = X%
-   - Class 3: Precision = X%, Recall = X%, F1-score = X%
-- Generate and interpret the confusion matrix: Include both a table and a visual representation to highlight correct predictions, misclassifications, and class-specific performance.
+   <br />
+
+   **Results:**
+
+   Summarize the performance of your model on the held-out test dataset using both quantitative metrics and visual analysis.
+
+   - Report the overall accuracy: Show the percentage of correctly classified test samples (X%).
+   - Analyze classification performance: Present precision, recall, and F1-score for each sentiment class to provide insights into the model’s performance:
+      - Class 1: Precision = X%, Recall = X%, F1-score = X%
+      - Class 2: Precision = X%, Recall = X%, F1-score = X%
+      - Class 3: Precision = X%, Recall = X%, F1-score = X%
+   - Generate and interpret the confusion matrix: Include both a table and a visual representation to highlight correct predictions, misclassifications, and class-specific performance.
+
+</details>
+
 
 <br><br>
 
 ### TASK 2: Build a model for Product Category Clustering
 
-- **Goal**: Simplify the dataset by clustering product categories into **4-6 meta-categories**.
-- **Task**: Develop and apply an unsupervised clustering model to group product reviews into 4–6 meaningful meta-categories based on similarities in their textual content and product characteristics.
-- **Notes**: 
-   - Analyze the dataset in depth to determine the most appropriate categories.
-   - After applying clustering, you can analyze the characteristics of each cluster (e.g., keywords, products, and reviews) and assign meaningful names to the identified groups to improve interpretability. For example:
-      - Ebook readers
-      - Batteries
-      - Accessories (keyboards, laptop stands, etc.)
-      - Non-electronics (Nespresso pods, pet carriers, etc.)
+
+<details>
+  <summary>Click here for more details</summary>
+  
+  <br />
+
+   - **Goal**: Simplify the dataset by clustering product categories into **4-6 meta-categories**.
+   - **Task**: Develop and apply an unsupervised clustering model to group product reviews into 4–6 meaningful meta-categories based on similarities in their textual content and product characteristics.
+   - **Notes**: 
+      - Analyze the dataset in depth to determine the most appropriate categories.
+      - After applying clustering, you can analyze the characteristics of each cluster (e.g., keywords, products, and reviews) and assign meaningful names to the identified groups to improve interpretability. For example:
+         - Ebook readers
+         - Batteries
+         - Accessories (keyboards, laptop stands, etc.)
+         - Non-electronics (Nespresso pods, pet carriers, etc.)
+
+</details>
+
 
 
 <br><br>
 
 ### TASK 3: Generate a summary for each product category using Generative AI
 
-- **Goal**: Generate a summary with the reviews for each category.
-- **Task**: Create a model that generates a short article (like a blog post) for each of the product categories you created in the previous step. 
+<details>
+  <summary>Click here for more details</summary>
+  
+  <br />
 
+   - **Goal**: Generate a summary with the reviews for each category.
+   - **Task**: Create a model that generates a short article (like a blog post) for each of the product categories you created in the previous step. 
 
-**Example Format**:
+   <br />
 
-For the summary of each category, you can include:
+   **Example Format**:
 
-- **Top 3 products** and key differences between them.
-- **Top complaints** for each of those products.
-- **Worst product** in the category and why it should be avoided.
+   For the summary of each category, you can include:
 
-This is just an example. You can get more ideas from other consumer Reviews websites, Amazon, The Verge, The Wirecutter, etc.
+   - **Top 3 products** and key differences between them.
+   - **Top complaints** for each of those products.
+   - **Worst product** in the category and why it should be avoided.
 
-**Some options**:
+   This is just an example. You can get more ideas from other consumer Reviews websites, Amazon, The Verge, The Wirecutter, etc.
 
-- You can use **Pretrained Generative Models** like **T5**, or **BART** for generating coherent and well-structured summaries. These models excel at tasks like summarization and text generation, and can be fine-tuned to produce high-quality outputs based on the extracted insights from reviews.
-- You can also explore other **Transformer-based models** available on platforms like **Hugging Face**. Fine-tuning any of these pre-trained models on your specific dataset could further improve the relevance and quality of the generated summaries.
-- Another option is to use a proprietary LLM API (e.g., the OpenAI API) to generate the summaries, which can produce high-quality results. We'll explore this approach later in the course. For now, we encourage you to first experiment with a pretrained model that you can run and adapt yourself.
+   <br />
 
+   **Some options**:
 
-**Recommendations**:
+   - You can use **Pretrained Generative Models** like **T5**, or **BART** for generating coherent and well-structured summaries. These models excel at tasks like summarization and text generation, and can be fine-tuned to produce high-quality outputs based on the extracted insights from reviews.
+   - You can also explore other **Transformer-based models** available on platforms like **Hugging Face**. Fine-tuning any of these pre-trained models on your specific dataset could further improve the relevance and quality of the generated summaries.
+   - Another option is to use a proprietary LLM API (e.g., the OpenAI API) to generate the summaries, which can produce high-quality results. We'll explore this approach later in the course. For now, we encourage you to first experiment with a pretrained model that you can run and adapt yourself.
 
-- If you use a pretrained model, start with the smallest versions of popular models (llama, mistral, ...). Choose a small model that you can fine tune and run fast inference on. Anywhere between 1B-8B parameters should be fine, do not go larger.
-- Work on the prompt for the summarizer by experimenting with multiple prompt variants and evaluating their performance. If prompt engineering alone does not achieve the desired quality, consider fine-tuning the model for this specific task to improve accuracy and consistency.
+   <br />
+
+   **Recommendations**:
+
+   - If you use a pretrained model, start with the smallest versions of popular models (llama, mistral, ...). Choose a small model that you can fine tune and run fast inference on. Anywhere between 1B-8B parameters should be fine, do not go larger.
+   - Work on the prompt for the summarizer by experimenting with multiple prompt variants and evaluating their performance. If prompt engineering alone does not achieve the desired quality, consider fine-tuning the model for this specific task to improve accuracy and consistency.
+
+</details>
+
 
 
 <br><br>
 
 ### TASK 4: Deploy the Sentiment Analysis Model
 
-Now it's time to make your model usable by others. Deploy the sentiment classifier from Task 1 as a simple web app that anyone can try.
 
-- Goal: Ship a working, publicly accessible demo where users can paste a review and get a sentiment prediction.
-- Tasks:
-   - Build a simple interface where a user can enter the text of a review and receive a predicted sentiment (positive, negative, or neutral), ideally with confidence scores for each class.
-   - Deploy it so that it's accessible through a public URL.
+<details>
+  <summary>Click here for more details</summary>
+  
+  <br />
 
+   Now it's time to make your model usable by others. Deploy the sentiment classifier from Task 1 as a simple web app that anyone can try.
 
-**Recommended option: Gradio + Hugging Face Spaces**
+   - Goal: Ship a working, publicly accessible demo where users can paste a review and get a sentiment prediction.
+   - Tasks:
+      - Build a simple interface where a user can enter the text of a review and receive a predicted sentiment (positive, negative, or neutral), ideally with confidence scores for each class.
+      - Deploy it so that it's accessible through a public URL.
 
-[Gradio](https://www.gradio.app/) lets you build an ML demo interface in a few lines of Python, and [Hugging Face Spaces](https://huggingface.co/spaces) hosts it for free. Together, they're one of the simplest ways to deploy a model.
+   <br />
 
-Notes:
-- You'll need to do some research on your own for this task (documentation and tutorials are plentiful).
-- If you prefer, you can use other tools (e.g., Streamlit, FastAPI + a hosting service), as long as the app is publicly accessible. We'll explore other deployment options later in the course.
+   **Recommended option: Gradio + Hugging Face Spaces**
+
+   [Gradio](https://www.gradio.app/) lets you build an ML demo interface in a few lines of Python, and [Hugging Face Spaces](https://huggingface.co/spaces) hosts it for free. Together, they're one of the simplest ways to deploy a model.
+
+   Notes:
+   - You'll need to do some research on your own for this task (documentation and tutorials are plentiful).
+   - If you prefer, you can use other tools (e.g., Streamlit, FastAPI + a hosting service), as long as the app is publicly accessible. We'll explore other deployment options later in the course.
+
+</details>
 
 
 
