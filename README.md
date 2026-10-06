@@ -196,6 +196,7 @@ Notes:
 ### TASK 4: Deploy the Sentiment Analysis Model
 
 
+**Live demo:** [Open the public Streamlit sentiment classifier](https://project-brief-nlp-automated-customers-reviews-4z3nd6dqfyj7ba8x.streamlit.app/).
 <details>
   <summary>Click here for more details</summary>
   
