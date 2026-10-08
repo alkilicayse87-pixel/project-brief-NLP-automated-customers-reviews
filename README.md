@@ -13,7 +13,7 @@ This is useful for product teams, e-commerce teams, and marketing teams that nee
 
 ## Business Problem
 
-Customer review data is often large, inconsistent, and fragmented across many products. Manual analysis is slow and unreliable. This project addresses that problem with NLP methods that help extract meaningful patterns from real-world review text.
+Customer review data is large, inconsistent, and fragmented across many products and platforms, so manual analysis is slow and unreliable. This project uses NLP to extract meaningful patterns and turn them into product recommendations.
 
 ## Dataset
 
@@ -201,6 +201,36 @@ Observed issues: wrong-sense words ("Tablette" = pill, and "Great tablet" read a
 ├── run_project.py
 └── ...
 ```
+
+## Problem Statement
+
+With thousands of reviews available across multiple platforms, manually analyzing them is inefficient. This project automates the process with NLP models that extract insights from customer feedback and give users product recommendations.
+
+## How Each Task Answers the Problem
+
+| Question the business asks | Task | Output |
+|---|---|---|
+| How do customers feel about each product? | 1. Sentiment classification | Positive / neutral / negative model |
+| Which products belong together? | 2. Product clustering | 5 meta-categories |
+| What should a buyer know about each category? | 3. Generative summaries | Recommendation articles |
+| How can teams explore and share this? | 4. Streamlit dashboard and predictor | Public app |
+| Can non-English readers use the insights? | 5. English to German translation | Translate tab and evaluation |
+
+## Known Limitations (honest summary)
+
+- 92% of reviews are positive, so 90% accuracy hides a macro F1 of about 51%. Negative and neutral classes are weak.
+- Star ratings are used as sentiment labels and are noisy.
+- Saved review text is lowercased with punctuation stripped, so it is a poor input for translation; the raw CSV is used for that.
+- The data has no review dates, so there is no trend analysis.
+- Translation is evaluated on 30 reviews with round-trip proxy metrics, not human German references.
+- Category summaries are not automatically checked against the source reviews.
+
+## Suggested Next Steps
+
+1. Fine-tune a transformer for sentiment and calibrate its scores.
+2. Replace keyword complaint themes with topic modelling, validated on a small hand-labelled set.
+3. Have a native German speaker rate about 100 translations.
+4. Add tests and CI, and serve the translation model from its own API.
 
 ## Reproduction
 
