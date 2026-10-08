@@ -1,0 +1,2 @@
+Model,Test accuracy,Test macro precision,Test macro recall,Test macro F1,Test weighted F1,Test samples
+TF-IDF + LinearSVC (balanced),0.9009386281588447,0.500693168506372,0.5253938118151503,0.511742803054612,0.9058680709557367,6925

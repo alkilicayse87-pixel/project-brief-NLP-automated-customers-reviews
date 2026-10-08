@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.venv-1/
+.venv-2/
+
+# Data
+*.csv
+!outputs/*.csv
+!outputs/*.png
+!outputs/*.md
+outputs/task2_review_clusters.csv
+outputs/task5_translation_samples.csv
+.venv*/
+.vscode/
+
+# Local runtime
+.env
+.streamlit/secrets.toml
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
