@@ -1,0 +1,16 @@
+pandas>=2.2.0
+numpy>=1.26.0
+scikit-learn>=1.5.0
+matplotlib>=3.8.0
+seaborn>=0.13.0
+nltk>=3.10.0
+joblib>=1.4.0
+gradio>=4.0.0
+openai>=1.30.0
+torch>=2.4.0
+transformers>=4.45.0,<5
+sentencepiece>=0.2.0
+sacremoses>=0.1.0
+langdetect>=1.0.9
+sacrebleu>=2.4.0
+rouge-score>=0.1.2

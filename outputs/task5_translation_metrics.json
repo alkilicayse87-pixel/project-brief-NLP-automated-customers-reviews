@@ -1,0 +1,14 @@
+{
+  "n_reviews": 30,
+  "n_translated": 30,
+  "round_trip_bleu": 54.97,
+  "round_trip_rouge1_f": 0.832,
+  "round_trip_rougeL_f": 0.815,
+  "sentiment_preserved_rate": 0.8,
+  "sentiment_preserved_by_class": {
+    "negative": 0.7,
+    "neutral": 0.7,
+    "positive": 1.0
+  },
+  "note": "Round-trip proxy metrics; no human German references available."
+}

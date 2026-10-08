@@ -370,13 +370,49 @@ except (FileNotFoundError, ValueError) as exc:
     st.error(str(exc))
     st.stop()
 
-dashboard_tab, predictor_tab = st.tabs(
-    ["Review insights dashboard", "Single-review predictor"]
+def render_translation() -> None:
+    st.subheader("Translate a review to German")
+    try:
+        import sys
+
+        sys.path.insert(0, str(ROOT))
+        from src.translation import translate_en_to_de
+    except ImportError:
+        st.info(
+            "Translation needs transformers, torch, sentencepiece, sacremoses and "
+            "langdetect (see requirements.txt). It is not installed in this deployment."
+        )
+        return
+
+    text = st.text_area("English review", height=140, key="translate_input")
+    if st.button("Translate"):
+        with st.spinner("Loading model and translating (first run downloads ~300 MB)..."):
+            result = translate_en_to_de(text)
+        status = result["status"]
+        if status == "empty":
+            st.warning("Please enter a review.")
+        elif status == "already_german":
+            st.info("Already German; shown unchanged.")
+            st.write(result["translation"])
+        elif status == "unsupported_language":
+            st.warning(
+                f"Detected language '{result['language']}'. This model only translates English to German."
+            )
+        else:
+            if status == "translated_truncated":
+                st.caption("Input was longer than 2000 characters and was truncated.")
+            st.success(result["translation"])
+
+
+dashboard_tab, predictor_tab, translate_tab = st.tabs(
+    ["Review insights dashboard", "Single-review predictor", "Translate to German"]
 )
 with dashboard_tab:
     render_insights()
 with predictor_tab:
     render_single_review_predictor(model_artifact)
+with translate_tab:
+    render_translation()
 
 st.caption(
     "Predictions run in this app using the saved Task 1 model. "
