@@ -6,6 +6,11 @@ An NLP pipeline that turns thousands of Amazon product reviews into insights: it
 
 **Live app:** https://project-brief-nlp-automated-customers-reviews-4z3nd6dqfyj7ba8x.streamlit.app/
 
+## Presentation
+
+- [View the presentation on Prezi](https://prezi.com/craft/room/oyHsJyeBu8tj7NJLmwHTHq?referral_token=XlRy38lnB3FN)
+- [Download the presentation slides (PDF)](presentation/NLP_Customer_Reviews_Slides.pdf)
+
 ## Project Overview
 
 **Problem statement.** With thousands of reviews available across multiple platforms, manually analyzing them is inefficient. This project automates the process with NLP models that extract insights from customer feedback and give users product recommendations.
