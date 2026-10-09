@@ -1,6 +1,6 @@
 # NLP Automated Customer Reviews
 
-**Presented by Ayse A. Oed and Ivan Metteuzi**
+**Presented by Ayse A. Oed and Ivan Matteuzi**
 
 An NLP pipeline that turns thousands of Amazon product reviews into insights: it classifies sentiment, clusters products into categories, generates category summaries with a local generative model, and shares everything through a public Streamlit app that also translates reviews into German.
 
@@ -8,7 +8,7 @@ An NLP pipeline that turns thousands of Amazon product reviews into insights: it
 
 ## Presentation
 
-- [View the presentation on Prezi](https://prezi.com/craft/room/oyHsJyeBu8tj7NJLmwHTHq?referral_token=XlRy38lnB3FN)
+- [View the presentation on Prezi](https://prezi.com/craft?load=oyHsJyeBu8tj7NJLmwHTHq&referral_token=XlRy38lnB3FN)
 - [Download the presentation slides (PDF)](presentation/NLP_Customer_Reviews_Slides.pdf)
 
 ## Project Overview

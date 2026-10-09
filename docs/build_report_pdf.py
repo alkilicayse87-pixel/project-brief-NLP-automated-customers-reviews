@@ -108,12 +108,12 @@ def build():
     def footer(canvas, doc):
         canvas.setFont("Helvetica", 8)
         canvas.setFillColor(colors.grey)
-        canvas.drawString(2 * cm, 1.2 * cm, "Project Report - NLP Automated Customer Reviews - Ayse A. Oed and Ivan Metteuzi")
+        canvas.drawString(2 * cm, 1.2 * cm, "Project Report - NLP Automated Customer Reviews - Ayse A. Oed and Ivan Matteuzi")
         canvas.drawRightString(A4[0] - 2 * cm, 1.2 * cm, str(doc.page))
 
     doc = SimpleDocTemplate(str(OUT), pagesize=A4, leftMargin=2 * cm, rightMargin=2 * cm, topMargin=2 * cm,
                             bottomMargin=2 * cm, title="Project Report - NLP Automated Customer Reviews",
-                            author="Ayse A. Oed and Ivan Metteuzi")
+                            author="Ayse A. Oed and Ivan Matteuzi")
     doc.build(story, onFirstPage=footer, onLaterPages=footer)
     print("saved", OUT)
 
